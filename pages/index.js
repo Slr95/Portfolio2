@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
-import {skills, estudios} from '../profile'
+import {skills, estudios, projects} from '../profile'
 console.log(estudios)
 
 console.log(skills)
@@ -81,6 +81,45 @@ const Index = () => (
             </div>
         </div>
         
+        {/** Portfolio */}
+        <div className="row">
+            <div className="col-md-12">
+                <div className="card card-body bg-dark">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h1 className="text-center text-light">Portfolio</h1>
+                        </div>
+
+                        {
+                            projects.map(({name, description, image}, i) => (
+                                <div className="col-md-4 py-2" key={i}>
+                            <div className="card h-100">
+                                <div className="overflow">
+                                    <img src={`/${image}`} alt="" className="card-img-top"/>
+                                </div>
+                                <div className="card-body">
+                                    <h3>{name}</h3>
+                                    <p>{description}</p>
+                                    <a href="#!">Conoce mas</a>
+                                </div>
+                            </div>
+                        </div>
+                            ))
+                        }
+
+                    </div>
+
+                <div className="text-center mt-4">
+                  <Link href="/portfolio">
+                    <a className="btn btn-outline-light">More Projects</a>
+                  </Link>
+                </div>
+              </div>
+
+        </div>
+
+        </div>
+
     </Layout>
 )
 

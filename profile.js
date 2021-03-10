@@ -51,3 +51,36 @@ export const estudios = [
       from: 2010,
     },
   ];
+
+  export const projects = [
+      {
+          name: "Web ecommerce",
+          description: "Tienda online de celulares, con carrito de compras. Hecho con Php y Mysql",
+          image: "portfolio1.png"
+      },
+      {
+        name: "FarmaSalud",
+        description: "Sistema de inventario para una farmacia. Hecho con Java y Mysql",
+        image: "portfolio2.png"
+    },
+    {
+        name: "Chat online",
+        description: "App chat online. Hecho con Php y Mysql",
+        image: "portfolio3.png"
+    },
+    {
+        name: "App Peliculas",
+        description: "App para buscar peliculas. Hecha con React y la api OMDB",
+        image: "portfolio4.png"
+    },
+    {
+        name: "App Notas",
+        description: "To do list. Hecho con NodeJS y MongoDB",
+        image: "portfolio5.png"
+    },
+    {
+        name: "Portfolio Web",
+        description: "Otro portfolio web. Hecho con SCSS y Javascript",
+        image: "portfolio6.png"
+    },
+  ]
