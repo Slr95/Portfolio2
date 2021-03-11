@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
-import {skills, estudios, projects} from '../profile'
+import {skills, estudios, projects} from '../profile';
 console.log(estudios)
 
 console.log(skills)
@@ -9,7 +9,7 @@ const Index = () => (
     <Layout>
         {/** Header card */}
         <header className="row">
-            <div className="col-mid-12">
+            <div className="col-md-12">
                 <div className="card card-body bg-secondary text-light animate__animated animate__fadeIn">
                     <div className="row">
                         <div className="col-md-4">
@@ -28,9 +28,9 @@ const Index = () => (
 
         {/** Second section */}
 
-        <div className="row py-2">
-            <div className="col-md-4">
-                <div className="card bg-light">
+        <div className="row">
+            <div className="col-md-4 py-2">
+                <div className="card bg-light animate__animated animate__fadeInLeft">
                     <div className="card-body">
                         <h1>Skills</h1>
 
@@ -111,7 +111,7 @@ const Index = () => (
 
                 <div className="text-center mt-4">
                   <Link href="/portfolio">
-                    <a className="btn btn-outline-light">More Projects</a>
+                    <a className="btn btn-outline-light">Mas proyectos</a>
                   </Link>
                 </div>
               </div>

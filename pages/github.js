@@ -1,11 +1,35 @@
 import Layout from '../components/layout'
 
-const Github = ()  => (
-    <Layout>
+const Github = ({user})  => {
+    return (
+        <Layout>
+            <div className="row">
+                <div className="col-md-4 offset-md-4">
+                    <div className="card card-body text-center">
+                        <h1>{user.name}</h1>
+                        <img src={user.avatar_url} alt=""/>
+                        <p>{user.bio}</p>
+                        <a href={user.blog} target="_blank" className="btn btn-outline-secondary my-2">Mi blog</a>
+                        <a href={user.html_url} target="_blank" className="btn btn-outline-secondary">Ir a Github</a>
+                    </div>
+                </div>
+            </div>
+        
+        </Layout>
+    )
+}
 
-        <h1>Github</h1>
-    
-    </Layout>
-)
+export async function getServerSideProps(){
+    const res = await fetch('https://api.github.com/users/Slr95')
+    const data = await res.json();
+
+    console.log(data)
+    return {
+        props: {
+            user: data
+
+        }
+    }
+}
 
 export default Github;
