@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link href="/">
-          <a className="navbar-brand">Simple Portfolio</a>
+          <a className="navbar-brand">Mi portfolio</a>
         </Link>
         <button
           className="navbar-toggler"
@@ -23,7 +23,7 @@ const Navbar = () => {
             <li className="nav-item">
               <Link href="/blog">
                 <a className="nav-link active" aria-current="page">
-                  Blog
+                  Contacto
                 </a>
               </Link>
             </li>

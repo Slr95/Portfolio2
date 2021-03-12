@@ -40,7 +40,7 @@ export const estudios = [
     {
       title: "Licenciatura en informatica",
       description:
-        "Cursando las ultimas materias de 5to de la carrera. Actualmente buscando su primera oportunidad laboral.",
+        "Cursando las ultimas materias de 5to de la carrera. Actualmente buscando mi primera oportunidad laboral.",
       from: 2017,
       to: 2021,
     },
@@ -84,3 +84,27 @@ export const estudios = [
         image: "portfolio6.png"
     },
   ]
+
+  export const posts = [
+    {
+      title: "React",
+      content:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+      imageURL:
+        "",
+    },
+    {
+      title: "Angular",
+      content:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+      imageURL:
+        "",
+    },
+    {
+      title: "Nextjs",
+      content:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+      imageURL:
+        "",
+    },
+  ];

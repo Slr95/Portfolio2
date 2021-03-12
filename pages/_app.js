@@ -1,8 +1,7 @@
-import 'bootswatch/dist/cosmo/bootstrap.min.css'
+import 'bootswatch/dist/materia/bootstrap.min.css'
+import 'animate.css/animate.min.css'
 import '../global.css'
 
-function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
-  }
-
-export default MyApp;
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}

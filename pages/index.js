@@ -1,16 +1,13 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
 import {skills, estudios, projects} from '../profile';
-console.log(estudios)
-
-console.log(skills)
 
 const Index = () => (
     <Layout>
         {/** Header card */}
         <header className="row">
             <div className="col-md-12">
-                <div className="card card-body bg-secondary text-light animate__animated animate__fadeIn">
+                <div className="card card-body bg-dark bg-secondary text-light animate__animated animate__fadeIn">
                     <div className="row">
                         <div className="col-md-4">
                             <img src="imagen1.png" alt="" className="img-fluid"/>
@@ -18,7 +15,7 @@ const Index = () => (
                         <div className="col-md-8">
                             <h1>Renzo Soler</h1>
                             <h3>FullStack Developer</h3>
-                            <p>Hola hola hoahaoahoahahoaahoahoahoahohohohaohoahohohaohaohaohaohaohaohaoahoaajoalalalalaalalalalaa asdasdadadadddaaddadaada</p>
+                            <p>Tengo 25 años, vivo en Pilar Cordoba. Con disponibilidad de viajar. Busco aplicar mis conocimientos teóricos y prácticos aprendidos durante mi formación academica con el fin de beneficiar a la organización y desarrollarme de forma profesional y personal.</p>
                             <a href="/hireme">Hire me</a>
                         </div>
                     </div>
@@ -53,9 +50,10 @@ const Index = () => (
                     </div>
                 </div>
             </div>
-            <div className="col-md-8">
-                <div className="card bg-light">
-                    <div className="card-body">
+            <div className="col-md-8 py-2">
+            {/* Estudios */}
+            <div className="card bg-light animate__animated animate__fadeInRight">
+                 <div className="card-body">
                         <h1>Estudios</h1>
 
                             <ul>
@@ -87,7 +85,7 @@ const Index = () => (
                 <div className="card card-body bg-dark">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1 className="text-center text-light">Portfolio</h1>
+                            <h1 className="text-center text-light">Proyectos realizados</h1>
                         </div>
 
                         {

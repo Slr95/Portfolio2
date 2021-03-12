@@ -1,48 +1,62 @@
-import Navbar from './navbar'
-import {useEffect} from 'react'
-import {useRouter} from 'next/router'
-import NProgress from 'nprogress'
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Navbar from "./Navbar";
+import PropTypes from "prop-types";
+import NProgress from "nprogress";
+import classNames from "classnames";
 
-const Layout = ({children}) => {
+const Layout = ({ children, title, footer = true, dark = false }) => {
+  const router = useRouter();
 
-    const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      console.log(url);
+      NProgress.start();
+    };
 
-    useEffect(() => {
+    router.events.on("routeChangeStart", handleRouteChange);
 
-        const handleRouteChange = url => {
-            console.log(url)
-            NProgress.start();
-        }
+    router.events.on("routeChangeComplete", () => NProgress.done());
 
-        router.events.on('routerChangeStart', handleRouteChange)
+    router.events.on("routeChangeError", () => nProgress.done());
 
-        router.events.on('routeChangeComplete', () => NProgress.done());
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
 
-        return () => {
-            router.events.off('routerChangeStart', handleRouteChange)
-        }
-    }, [])
+  return (
+    <div className={classNames({ "bg-dark": dark, "bg-light": !dark })}>
+      <Navbar />
+      <main className="container py-4">
+        {/* Title */}
+        {title && (
+          <h1 className={classNames("text-center", { "text-light": dark })}>
+            {title}
+          </h1>
+        )}
 
-    return (
-        <>
-        <Navbar/>
+        {/* Content */}
+        {children}
+      </main>
 
-        <main className="container py-4">
-            {children}
-        </main>
-
+      {footer && (
         <footer className="bg-dark text-light text-center">
-            <div className="container p-4">
-                <h1>&copy; Renzo Soler Portfolio</h1>
-                <p>2000- {new Date().getFullYear()}</p>
-                <p>Todos los derechos reservados.</p>
-            </div>
+          <div className="container p-4">
+            <h1>&copy; Renzo Soler Portfolio</h1>
+            <p>2000 - {new Date().getFullYear()}</p>
+            <p>Todos los derechos reservados.</p>
+          </div>
         </footer>
+      )}
+    </div>
+  );
+};
 
-    </>
-    )
-}
-    
-
+Layout.proptypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+  footer: PropTypes.bool,
+};
 
 export default Layout;
