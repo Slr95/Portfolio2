@@ -87,21 +87,21 @@ export const estudios = [
 
   export const posts = [
     {
-      title: "React",
+      title: "Linkedin",
       content:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
       imageURL:
         "",
     },
     {
-      title: "Angular",
+      title: "Gmail",
       content:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
       imageURL:
         "",
     },
     {
-      title: "Nextjs",
+      title: "Descargar CV",
       content:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
       imageURL:
