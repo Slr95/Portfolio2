@@ -16,7 +16,6 @@ const Index = () => (
                             <h1>Renzo Soler</h1>
                             <h3>FullStack Developer</h3>
                             <p>Tengo 25 años, vivo en Pilar Cordoba. Con disponibilidad de viajar. Busco aplicar mis conocimientos teóricos y prácticos aprendidos durante mi formación academica con el fin de beneficiar a la organización y desarrollarme de forma profesional y personal.</p>
-                            <a href="/hireme">Hire me</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +88,7 @@ const Index = () => (
                         </div>
 
                         {
-                            projects.map(({name, description, image}, i) => (
+                            projects.map(({name, description, image, url}, i) => (
                                 <div className="col-md-4 py-2" key={i}>
                             <div className="card h-100">
                                 <div className="overflow">
@@ -98,7 +97,7 @@ const Index = () => (
                                 <div className="card-body">
                                     <h3>{name}</h3>
                                     <p>{description}</p>
-                                    <a href="#!">Conoce mas</a>
+                                    <a href={url}>Conoce mas</a>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +107,7 @@ const Index = () => (
                     </div>
 
                 <div className="text-center mt-4">
-                  <Link href="/portfolio">
+                  <Link href="https://github.com/Slr95?tab=repositories">
                     <a className="btn btn-outline-light">Mas proyectos</a>
                   </Link>
                 </div>

@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 
 const _error = ({ statusCode }) => {
   return (
-    <Layout title="Something Goes Wrong" footer={false}>
+    <Layout title="Algo salio mal!" footer={false}>
       <p className="text-center">
         {statusCode
           ? `Could not load your user data: Status code ${statusCode}`

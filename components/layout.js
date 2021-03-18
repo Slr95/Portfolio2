@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import PropTypes from "prop-types";
 import NProgress from "nprogress";
+import nProgress from "nprogress";
 import classNames from "classnames";
 
 const Layout = ({ children, title, footer = true, dark = false }) => {
@@ -44,7 +45,7 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
         <footer className="bg-dark text-light text-center">
           <div className="container p-4">
             <h1>&copy; Renzo Soler Portfolio</h1>
-            <p>2000 - {new Date().getFullYear()}</p>
+            <p>2020 - {new Date().getFullYear()}</p>
             <p>Todos los derechos reservados.</p>
           </div>
         </footer>

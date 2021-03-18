@@ -15,7 +15,7 @@ const Github = ({ user, statusCode }) => {
             <img src={user.avatar_url} alt="" style={{ width: "100%" }} />
             <p>{user.bio}</p>
             <a
-              href={user.blog}
+              href="http://localhost:3000/blog"
               target="_blank"
               className="btn btn-outline-secondary my-2"
             >
