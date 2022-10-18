@@ -15,7 +15,7 @@ const Index = () => (
                         <div className="col-md-8">
                             <h1>Renzo Soler</h1>
                             <h3>FullStack Developer</h3>
-                            <p>Tengo 25 años, vivo en Pilar Cordoba. Con disponibilidad de viajar. Busco aplicar mis conocimientos teóricos y prácticos aprendidos durante mi formación academica con el fin de beneficiar a la organización y desarrollarme de forma profesional y personal.</p>
+                            <p>Tengo 26 años, vivo en Pilar Cordoba. Busco aplicar mis conocimientos teóricos y prácticos aprendidos durante mi formación academica con el fin de beneficiar a la organización y desarrollarme de forma profesional y personal.</p>
                         </div>
                     </div>
                 </div>
